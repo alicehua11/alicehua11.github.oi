@@ -1,0 +1,194 @@
+<!DOCTYPE>
+<html>
+<head>
+		<title>Egg Thieves</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+		<link href="example2.css" rel="stylesheet"/>
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+		<meta charset="utf-8" />
+		<style>
+
+		* {
+	    box-sizing: border-box;
+		}
+		.column {
+    		float: left;
+    		width: 30%;
+    		padding: 10px;
+    		height: 400px;
+			z-index:1000;
+			background-color:rgba(0,0,0,0.5);
+    	}
+		.row:after {
+    		content: "";
+    		display: table;
+    		clear: both;
+    		position: absolute;
+			z-index:1000;
+			background-color:rgba(0,0,0,0.5);
+		}
+		video {
+			position:fixed;
+			right:0;
+			bottom:0;
+			top: 0;
+			left:0;
+			min-height: 100%;
+			min-width: 100%;
+			width: auto;
+			height:auto;
+			z-index:-1;
+			background: url(../img/turtle.jpg) no-repeat;
+			background-size:cover;
+			}
+		#video-container {
+			position:relative;
+			width: auto;
+			height:auto;
+			}
+
+		#viz1543301903463 {
+			position:absolute;
+			top:0;
+			left:0;
+			min-height: 100%;
+			min-width: 100%;
+			}
+		.content {
+			position: relative;
+			width: auto;
+			height: auto;
+			
+		}
+		.container {
+			position: relative;
+			width: auto;
+			height: auto;
+		
+		}
+		.container1{
+			position: relative;
+			width: auto;
+			height: auto;
+
+		}
+		</style>
+</head>
+
+<body>
+	<div id="video-container">
+		<video "preload="auto" autoplay="true" loop="loop" muted="muted">
+				<source src="turtle.mp4" type="video/mp4">
+		</video>
+
+<div class="content">
+		<h1><p style="margin-left: 300px; margin-top: 2%;margin-bottom:2%;">Turtle Poaching in Costa Rica</p></h1>
+		<hr>
+		<iframe style="margin-left:50px;"width="560" height="315" src="https://www.youtube.com/embed/t7TRrm1TzM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		
+		<p style="width: 500px; height: 250px; float:right; margin-right:70px;"> 
+			<em>Dermochelys coriacea</em> or Leatherback turtle is <a href="https://static1.squarespace.com/static/5369465be4b0507a1fd05af0/t/53aa3d16e4b06e3a3ae88de3/1403665686232/leatherback+fact+sheet.pdf">the largest of all sea turtles</a><br>
+			The name Dermochelys comes from Greek words <em>derma</em> (skin) and <em>chelys</em> (tortoise, turtle)
+			The name coriacea comes from Latin <em>coriaceus</em> (of leather) which refers to the species’ leatherlike carapace.<br>
+			They can grow to 4-8 feet in length. Adult leatherback turtles can weigh from <a href="http://www.turtles.org/leatherd.htm">700 – 2,000 pounds.</a>
+			Leatherback turtles’ eggs are poached along the beaches of Costa Rica for human consumption and exchange of drugs such as cocaine.<br>
+			Many of them also die from ingesting plastic debris mistaken for jellyfish or become tangled in illegal fishing lines.
+			The conservation status of this species is <a href="https://reptile-database.reptarium.cz/species?genus=Dermochelys&species=coriacea">“Critically Endangered”</a> according to the <a href="https://www.iucnredlist.org/">IUCN Red List.</a> 
+		</p>
+
+
+</div>
+
+	<div style="margin-left: 100px"><p id="the-map" style="width: 900px; height: 500px"></div> 
+		<script>
+		var map = L.map('the-map').setView([9.866828, -83.813751], 7);
+			  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+				maxZoom: 17,
+				attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+				}).addTo(map);
+
+		var myIcon = L.icon({
+		iconUrl: 'flag.png',
+		iconSize: [38, 35]
+		});
+
+		marker = L.marker([10.1221,-82.8044], {icon:myIcon,});
+		var popup = L.popup().setContent('This is the most dangereous spot for Leatherback turtles' + marker.getLatLng().toString());
+			marker.addTo(map).bindPopup("<img id='popUpPic' src='northern.jpg' width='200' height='100'><p>This is the most dangereous spot for Leatherback turtles!</p>");
+
+		var image = L.imageOverlay(
+            'parks.jpg',
+            [[11.384147, -86.436565], [10.968808, -83.639278], [9.574719, -82.540739], [7.653860, -82.004354]], {
+            opacity: .8
+        }).addTo(map);
+
+
+
+	
+		</script>
+
+<div class="container">
+	<img style="float:left" src="Jairo.jpg" width="400" height="250"/>
+	<iframe style="margin-left:50px;" width="560" height="315" src="https://www.youtube.com/embed/OuLVADWIisM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<div class="row">
+  		<div class="column" style="background-color:orange;">
+		<ul>
+			<li>1 Santa Rosa National Park</li><br>
+			<li>2 Guanacaste National Park</li><br>
+			<li>3 Las Baulas Marine National Park & Tamarindo Wildlife Refuge</li><br>
+			<li>4 Cabo Blanco Absolute National Reserve</li><br>
+			<li>5 Barra Honda National Park</li><br>
+			<li>6 Palo Verde National Park</li><br>
+			<li>7 Lomas Barbudal Biologic Reserve</li><br>
+			<li>8 Ostional National Wildlife Refuge</li><br>
+			<li>9 Carara National Park</li><br>
+			<li>10 Manuel Antonio National Park</li><br>
+			<li>11 Ballena National Park</li><br>
+			<li>12 Isla del Caño Biologic Reserve</li><br>
+			<li>13 Corcovado National Park</li><br>
+			<li>14 Gandoca-Manzanillo National Wildlife Refuge</li><br>
+			<li>15 Cahuita National Park</li><br>
+			<li>16 Tortuguero National Park</li><br>
+			<li>17 Barra del Colorado National Wildlife Refuge</li><br>
+		</ul>
+  		</div>
+
+  		<div class="column" style="background-color:orange;">
+ 		<ul>
+ 			<li>18 Caño Negro National Wildlife Refuge</li><br>
+			<li>19 Rincón de la Vieja National Park</li><br>
+			<li>20 Arenal National Park</li><br>
+			<li>21 Volcán Poás National Park</li><br>
+			<li>22 Braulio Carrillo National Park</li><br>
+			<li>23 Volcán Irazú National Park</li><br>
+			<li>24 Guayabo National Monument</li><br>
+			<li>25 Tapantí (Orosí) National Park</li><br>
+			<li>26 La Amistad International Park</li><br>
+			<li>27 Hitoy-Cerere Biologic Reserve</li><br>
+			<li>28 Chirripó National Park</li><br>
+			<li>29 Golfito National Wildlife Refuge</li><br>
+			<li>30 Isla Bolaños National Wildlife Refuge</li><br>
+			<li>31 Islas Guayabo, Negritos and Pájaros Biologic Reserves</li><br>
+			<li>32 Curú National Wildlife Refuge</li><br>
+			<li>33 Juán Castro Blanco National Park</li><br>
+			<li>34 Isla del Coco National Park (World Heritage status)</li><br>
+		</ul>
+  		</div>
+	</div>
+</div>
+
+
+<div class="container1">
+	<div class='tableauPlaceholder' id='viz1543381840345' style='position: relative'><noscript><a href='https:&#47;&#47;dataunodc.un.org&#47;drugs&#47;prevalence_map'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WD&#47;WDR2018-Useofdrugs&#47;Full&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WDR2018-Useofdrugs&#47;Full' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WD&#47;WDR2018-Useofdrugs&#47;Full&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1543381840345');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];vizElement.style.width='700px';vizElement.style.height='700px';                    
+		var scriptElement = document.createElement('script');scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+
+</div>
+</body>
+</html>
