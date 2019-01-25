@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Animate a point along a route</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpY2VodWExMSIsImEiOiJjam1iMHV5aXAwMGRtM3JzM2dzamJjamkzIn0.gCsvu2g9o3J5DKJfNarokQ';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/alicehua11/cjp1x9r380crz2sqr4ig2rmh8',
+     center: [-166.2890625,
+          21.94304553343818],
+  zoom: 1
+});
+
+var start = { x: 9.999, y: -83.084 };
+var end = { x: -1.123, y: 142.184 };
+var generator = new arc.GreatCircle(start, end, { name: 'Seattle to DC' });
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json()).addTo(map);
+</script>
+
+</body>
+</html>
