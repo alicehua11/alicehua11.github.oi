@@ -1,0 +1,321 @@
+<!DOCTYPE>
+<html>
+<head>
+		<title>Egg Thieves and Beyond</title>
+		<meta charset="utf-8" />
+		<link href="example2.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script> 		
+ 		
+		<style>
+		
+		* {
+	    box-sizing: border-box;
+		}
+		.column1, .column2{
+    		width: 400px;
+
+    		height: 400px;
+			z-index:1000;
+			background-color:rgb(242, 242, 232,.8);
+			color:#397a1d;
+			line-height:120%;
+			font-weight:bold;
+
+	
+	
+    	}
+		.row:after {
+    		content: "";
+    		display: table;
+    		
+			z-index:1000;
+			color:white;
+			line-height:100%;
+			clear:both;
+			padding:10px;
+		}
+
+
+
+		video {
+			position:fixed;
+			right:0;
+			bottom:0;
+			top: 0;
+			left:0;
+			min-height: 100%;
+			min-width: 100%;
+			width: auto;
+			height:auto;
+			z-index:-1;
+			background: url(../img/turtle.jpg) no-repeat;
+			background-size:cover;
+			}
+		#video-container {
+			position:relative;
+			width: auto;
+			height:auto;
+			}
+
+		#viz1543301903463 {
+			position:absolute;
+			top:0;
+			left:0;
+			min-height: 100%;
+			min-width: 100%;
+			}
+		.content {
+			position: relative;
+			width: auto;
+			height: auto;
+			
+		}
+		.container {
+			position: relative;
+			width: auto;
+			height: auto;
+			margin-left:20px;
+		
+		}
+		.container1 {
+			position: relative;
+			width: auto;
+			height: auto;
+		}
+		</style>
+</head>
+
+<body>
+	<div id="video-container">
+		<video "preload="auto" autoplay="true" loop="loop" muted="muted">
+				<source src="turtle.mp4" type="video/mp4">
+		</video>
+
+	<div class="content">
+		<h1><p style="margin-left: 90px; text-align:center; margin-top: 3%;margin-bottom:3%; font-size: 60;">Costa Rica Egg Thieves and Beyond</p></h1>
+		<hr>
+		<iframe style="margin-left:50px; padding-top:20px;"width="560" height="430" src="https://www.youtube.com/embed/t7TRrm1TzM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		
+		<p style="line-height: 150%; width: 550px; height: 410px; float:right; margin-right:50px; background: rgba(0,0,0,.8); padding: 10px;"> 
+			<em>Dermochelys coriacea</em> or Leatherback turtle is <a href="https://static1.squarespace.com/static/5369465be4b0507a1fd05af0/t/53aa3d16e4b06e3a3ae88de3/1403665686232/leatherback+fact+sheet.pdf">the largest of all sea turtles</a><br>
+			The name Dermochelys comes from Greek words <em>derma</em> (skin) and <em>chelys</em> (tortoise, turtle)
+			The name coriacea comes from Latin <em>coriaceus</em> (of leather) which refers to the species’ leatherlike carapace.<br>
+			They can grow to 4-8 feet in length. Adult leatherback turtles can weigh from <a href="http://www.turtles.org/leatherd.htm">700 – 2,000 pounds.</a>
+			Leatherback turtles’ eggs are poached along the beaches of Costa Rica for human consumption and more recently been used to exchange for illegal drugs such as cocaine.<br>
+			The conservation status of this species is <a href="https://reptile-database.reptarium.cz/species?genus=Dermochelys&species=coriacea">“Critically Endangered”</a> according to the <a href="https://www.iucnredlist.org/">IUCN Red List.</a> 
+		</p><br><br>
+
+		<h2 style="margin-left: 180px; ; text-align: center; line-height: 150%; width: 900px;" > My hope with this final story-telling project is to use digital tools to study and bring awareness on the population & migration of Leatherback sea turtles, to shed light on its excessive poaching and drug-related crimes in Costa Rica.<br></h2>
+
+		<iframe style="margin-left:30px;" width="1200" height="615" src="lab6.html" allowfullscreen></iframe>
+		<img style="margin-left:50px; padding-top:20px;"width="560" height="710"" src="journey.jpg"/>
+
+		<p style="line-height: 200%; width: 550px; height: 1060px; float:right; margin-right:50px; background: rgba(0,0,0,.8); padding: 15px;"> 
+			The pink polygons on the open water of the map shows the presence of Leatherback turtles in the world. We know their locations by satellite tracking, which shows that they can also swim in regions <a href="https://conserveturtles.org/information-about-sea-turtles-leatherback-sea-turtle/">below 40 degrees Fahrenheit.</a> Due to their massive size and powerful front flippers, they travel miles across the Pacific Ocean to their favorite nesting sites worldwide. The image on the left is taken from a study of <a href="https://www.sciencedaily.com/releases/2008/02/080214144429.htm">Leatherback Sea Turtle 12,700 Mile Migratory Journey Across The Pacific</a> done by a team of <a href="https://www.noaa.gov/">NOAA</a> researchers.<br>
+			Sadly, in Costa Rica, Leatherback egg-havesting has long been a local tradition, these <em>hueveros</em> are not only sources of income, they're also considered aphrodisiac in the market. Since 1996, Costa Rica adopted environmental laws  making it illegal to harvest Leatherback turtles' eggs. However, weak law enforcement and high demand have led to violent fighting between egg harvesters. Selling these eggs to popular markets in <a href="http://earthwatch.org/Multimedia/the-night-watch">San Jose</a> and <a href="https://www.scientificamerican.com/article/illegal-sea-turtle-egg-poaching-rise-costa-rica/"> bars in Panama</a> has become some people's livelihood. Playa Granda, Tortuguero, Moín, Guacalillo are some of the largest nesting sites, this means that they are also very dangerous, particularly at night when the poachers and conservationists trotting along the shore to look for turtles laying their eggs in the dark.<br> 
+			Fortunately, things have changed since many conservation organizations such as <a href="https://earthwatch.org/">EarthWatch Institute</a> conduct conservation effort through <a href="https://earthwatch.org/Expeditions/Costa-Rican-Sea-Turtles"> eco-volunteerism. </a> They also educate the locals about the important of marine sea turtles and engage the local families, who relied on turtle eggs income, to become park guides for tourists. <br> 
+		</p>
+		<br><br>
+		<iframe style="margin-left:50px;" width="560" height="350" src="https://www.youtube.com/embed/OuLVADWIisM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br><br>
+
+	</div>
+
+</div>
+<div class="content">
+
+		<p style="line-height: 200%; width:1120px; height: 860px; margin-left:60px; background: rgba(0,0,0,.8); padding: 20px;"> 
+			<img style="float:left; padding:10px;" src="Jairo.jpg" width="560" height="350"/>
+			The appeal of a beautiful and eco-friendly Costa Rica has diminished after <a href=" https://news.nationalgeographic.com/news/2013/06/130617-costa-rica-environmentalist-murder-leatherback-turtle-eggs-poaching/">the murder of a local conservationist</a>, Jairo Mora (picture to the right), on May 30, 2013. Found dead on Moín Beach in Limon, Jairo was patrolling for Leatherback sea turtles with 4 other female oversea conservationists. The females were assaulted and tied up to the hut, where they managed to escape. Coincidentally, the hut was later burnt by the police by "mistake". The court judgement allowed for his murderers to go unpunished, this has sparked national protest on the government's ineptness in protecting their own people and their environment.<br>
+			
+			It is not surprising to witness the rise of crimes related to Leatherback turtles' eggs. Currently, one net full of Leatherback turtles' eggs is 100USD, more than any family combined income can be in a day.
+			The poachers use ATVs to poach on the beach and set traps for conservationists' vehicles at night. 
+			According to a Vice documentary <a href="https://www.youtube.com/watch?v=2OCnOvPFlL4&t=1730s">Poaching, Drugs, and Murder in Costa Rica: Shell Game</a>, Jairo's elder shares that the gang that killed him was heavily involved with criminal actitivies including poaching, drug trafficking and kidnapping. Today, turtle egg poachers are synonymous with drug dealers. Moín has become one of the most dangerous place in Costa Rica, where it's now the port for drug boats to come ashore and a magnet for drug-related crimes.</br>
+			Below is the <a href="http://www.unodc.org/wdr2018/en/interactive-map.html">2016 UN World Drug Report</a>, select cocaine in the drug group list on the upper right corner of the map to see that Costa Rica has the largest circle of prevalence in the Central America region. Drug dealing via boats has been documented in Guacalillo. In 2004, police intercepted 26 tons of cocaine.<br>
+			Park Rangers are understaffed, underarms to control this influx of crimes. They are armed with older weapons, out run by poachers' AK-47 and 9mm firearms. It is believed that their government is not interested in improving the conditions of their park rangers. These rangers are left to be on their own protecting thousands of acreas of national parks and protected wildlife areas.
+		</p>
+
+		<div class='tableauPlaceholder' id='viz1543381840345' style='position: relative; margin-left:170px; width: 900px;'><noscript><a href='https:&#47;&#47;dataunodc.un.org&#47;drugs&#47;prevalence_map'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WD&#47;WDR2018-Useofdrugs&#47;Full&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WDR2018-Useofdrugs&#47;Full' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WD&#47;WDR2018-Useofdrugs&#47;Full&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1543381840345');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];vizElement.style.width='900px';vizElement.style.height='450px';                    
+		var scriptElement = document.createElement('script');scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>	
+</div>
+
+<h3 style="margin-left: 150px; ; text-align: center; line-height: 150%; width: 900px;"> National Parks of Costa Rica, Reserves and Protected Areas</h3>
+
+<div class="container>
+<div style="margin-left:30px"><p id="the-map" style="margin-left: :20px; width: 800px; height: 500px; float:left;"></div> 
+	<script>
+	var map = L.map('the-map').setView([9.866828, -83.813751], 7);
+			  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+				maxZoom: 17,
+				attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+				}).addTo(map);
+
+	var image = L.imageOverlay(
+            'parks.jpg',
+            [[11.384147, -86.436565], [10.968808, -83.639278], [9.574719, -82.540739], [7.653860, -82.004354]], {
+            opacity: .8
+        }).addTo(map);
+
+
+		var image = L.imageOverlay(
+            'parks.jpg',
+            [[11.384147, -86.436565], [10.968808, -83.639278], [9.574719, -82.540739], [7.653860, -82.004354]], {
+            opacity: .8
+        }).addTo(map);
+
+	var myIcon = L.icon({
+		iconUrl: 'flag.png',
+		iconSize: [38, 35]
+	});
+
+     var marker = L.marker([10.094210, -82.900017], {icon: myIcon}); 
+	var popup = L.popup().setContent('<a href="https://www.google.com/maps/place/Playa+Grande,+Guanacaste+Province,+Costa+Rica/@10.3313209,-85.8647634,14z/data=!3m1!4b1!4m5!3m4!1s0x8f9e3bf765513389:0xa8b902eb59fcdf30!8m2!3d10.3329705!4d-85.8447846">Moín</a>');
+		marker.addTo(map).bindPopup(popup).openPopup();
+
+    var marker = L.marker([10.767530, -83.337767], {icon: myIcon});
+  	var popup = L.popup().setContent('<a href="https://www.google.com/maps/place/Tortuguero,+Lim%C3%B3n+Province,+Costa+Rica/@10.5445634,-83.5075092,16z/data=!3m1!4b1!4m5!3m4!1s0x8fa7560928a2e741:0x7b7e58e66658b6eb!8m2!3d10.5424838!4d-83.5023552">Tortuguero</a>');
+  		marker.addTo(map).bindPopup(popup).openPopup();
+
+	
+     var marker = L.marker([10.332200, -85.822097], {icon: myIcon});
+     var popup = L.popup().setContent('<a href="https://www.google.com/maps/place/Lim%C3%B3n+Province,+Mo%C3%ADn,+Costa+Rica/@9.9966187,-83.1002427,15z/data=!3m1!4b1!4m5!3m4!1s0x8fa71ab917dd391b:0x8169a53f80efbad2!8m2!3d9.9924257!4d-83.0951852">Play Grande</a>');
+		marker.addTo(map).bindPopup(popup).openPopup();
+
+     var marker = L.marker([9.879587, -84.552041], {icon: myIcon});  
+     var popup = L.popup().setContent('<a href="https://www.google.com/maps/place/Playa+Guacalillo/@9.8200483,-84.6724705,15z/data=!3m1!4b1!4m5!3m4!1s0x8fa1cb0ec2f643fb:0xff4be18d13ecb7b1!8m2!3d9.8158954!4d-84.660336">Guacalillo</a>');
+		marker.addTo(map).bindPopup(popup).openPopup();
+
+		</script>	
+	
+	
+		<div class="row" style="float:right; padding:20px">
+		
+  		<div class="column1"style="float:right; padding-bottom:0";>
+		<ul>
+			<li>1 Santa Rosa National Park</li><br>
+			<li>2 Guanacaste National Park</li><br>
+			<li>3 Las Baulas Marine National Park & Tamarindo Wildlife Refuge</li><br>
+			<li>4 Cabo Blanco Absolute National Reserve</li><br>
+			<li>5 Barra Honda National Park</li><br>
+			<li>6 Palo Verde National Park</li><br>
+			<li>7 Lomas Barbudal Biologic Reserve</li><br>
+			<li>8 Ostional National Wildlife Refuge</li><br>
+			<li>9 Carara National Park</li><br>
+			<li>10 Manuel Antonio National Park</li><br>
+			<li>11 Ballena National Park</li><br>
+			<li>12 Isla del Caño Biologic Reserve</li><br>
+			<li>13 Corcovado National Park</li><br>
+			<li>14 Gandoca-Manzanillo National Wildlife Refuge</li><br>
+			<li>15 Cahuita National Park</li><br>
+			<li>16 Tortuguero National Park</li><br>
+			<li>17 Barra del Colorado National Wildlife Refuge</li><br>
+		</ul>
+  		</div>
+
+  		<div class="column2" style="clear:both; padding-top: 0;">
+ 		<ul>
+ 			<li>18 Caño Negro National Wildlife Refuge</li><br>
+			<li>19 Rincón de la Vieja National Park</li><br>
+			<li>20 Arenal National Park</li><br>
+			<li>21 Volcán Poás National Park</li><br>
+			<li>22 Braulio Carrillo National Park</li><br>
+			<li>23 Volcán Irazú National Park</li><br>
+			<li>24 Guayabo National Monument</li><br>
+			<li>25 Tapantí (Orosí) National Park</li><br>
+			<li>26 La Amistad International Park</li><br>
+			<li>27 Hitoy-Cerere Biologic Reserve</li><br>
+			<li>28 Chirripó National Park</li><br>
+			<li>29 Golfito National Wildlife Refuge</li><br>
+			<li>30 Isla Bolaños National Wildlife Refuge</li><br>
+			<li>31 Islas Guayabo, Negritos and Pájaros Biologic Reserves</li><br>
+			<li>32 Curú National Wildlife Refuge</li><br>
+			<li>33 Juán Castro Blanco National Park</li><br>
+			<li>34 Isla del Coco National Park (World Heritage status)</li><br>
+		</ul>
+  		</div>
+  	</div>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  	<p style="line-height: 200%; width: 800px; height: 520px; margin-left:10px; background: rgba(0,0,0,.8); padding: 15px;">
+		I decided to use Mapbox and Leaflet for this project. I chose Mapbox because it is friendlier to use with Geojson and stylizing points and lines to show the relationship of the Leatherback turtle and its nesting sites, I created this geospatial data manually on Mapbox. I chose Leaflet because I prefer to use it with the overlay function. There’s no data on Costa Rica eco-volunteers but I had more luck looking for data on Leatherback turtles from exploring Cal <a href="https://guides.lib.berkeley.edu/earth-sciences-library?b=g&d=a&group_id=632">Earth Sciences and Maps Library</a>. I also wanted to show the involvement of Costa Rica in cocaine transportation, the UN World Drug Crime Report reaffirms the fact that Costa Rica is a strong conduit of cocaine. From looking at these 3 maps, the viewer can see a correlation between drug crime and turtle poaching taking place on both protected and unprotected areas of the country. While my maps can tell us where these places of turtle nesting, its migration patterns and Costa Rica protected areas, it could not show us about the turtle characteristics or the detail story behind the conservationist murder. For those details, I included videos, images, links and texts, and an additional map created by another source to give the viewer a more complete picture. 
+
+	</p> 
+
+
+</div>
+
+<div class="content">
+
+	<ul style="line-height: 150%; width:100%; height: 520px; margin-right:30px; background: rgb(242, 242, 232,.8); padding: 15px;"> References:
+		<li> For data on Facts about Leatherback Sea Turtles:
+			<strong>https://static1.squarespace.com/static/5369465be4b0507a1fd05af0/t/53aa3d16e4b06e3a3ae88de3/1403665686232/leatherback+fact+sheet.pdf</strong><br>
+			<strong>https://conserveturtles.org/information-about-sea-turtles-leatherback-sea-turtle/</strong></li><br>
+
+		<li> For data on Leatherback Sea Turtles Range;<br>
+			<strong>https://www.iucnredlist.org/species/6494/43526147</strong></li><br>
+
+		<li> For data on Mile Migratory Journey Across The Pacific:<br>
+			<strong>https://www.sciencedaily.com/releases/2008/02/080214144429.htm</strong></li><br>
+
+		<li> For data on Costa Rica illegal egg poaching:<br>
+			<strong>https://www.livescience.com/34514-costa-rica-turtle-egg-poaching.html</strong><br>
+			<strong>https://www.scientificamerican.com/article/illegal-sea-turtle-egg-poaching-rise-costa-rica/</strong></li><br>
+
+		<li>For data on conservation movement and effort:<br>
+			<strong> https://earthwatch.org/</strong></li><br>
+
+		<li>For World Drug Report:<br>
+			<strong>http://www.unodc.org/wdr2018/en/interactive-map.html</strong><br>
+
+
+		<li> For data on the murder of Jairo and drug crimes:<br>
+			<strong> https://news.nationalgeographic.com/news/2013/06/130617-costa-rica-environmentalist-murder-leatherback-turtle-eggs-poaching/<br>
+			https://www.youtube.com/watch?v=2OCnOvPFlL4&t=1730s</strong></li>
+
+		<li>For data on National Parks of Costa Rica, Reserves and Protected areas:<br>
+
+			<strong>www.costaricabureau.com/nationalparks/index.html</strong></li>
+		
+	</ul>
+
+
+
+
+
+</div>
+</body>
+</html>
