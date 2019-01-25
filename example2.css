@@ -1,21 +1,19 @@
-
-p, h1, h2, h3, h4, h5, h6, figcaption {
-  font-family: "Arial", sans-serif;
+body {
+  background-image: url(../img/turtle.jpg);
+}
+ h1, h2, h3, h4, h5, h6, figcaption {
+  font-family: Helvetica Neue;
   color: white;
 }
 
-h3 {
-  font-size: medium;
-}
+h2, h3 {
+  font-size: 30;
 
-h2 {
-  font-size: small;
 }
 
 p {
   font-size: larger;
   font-weight: lighter;
-  font-family: normal 11px Times, serif;
   color: white;
 }
 
@@ -27,9 +25,4 @@ li {
   display:inline-block;
 }
 a {
-  color:#c44127;
-}
-  - a normal, unvisited link
-a:visited - a link the user has visited
-a:hover - a link when the user mouses over it
-a:active
+  color:#ed2c12;
